@@ -1,1 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: rgb(0, 0, 0, 1);
+}
+
+a,
+a:visited,
+a:hover {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.form-control {
+  border-radius: 2px;
+  border-color: 1px solid rgb(0, 0, 0, 0.5);
+  height: 45px;
+  outline: 0;
+  box-shadow: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: rgba(0, 133, 230, 0.9);
+}
+
+.input-group {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group-btn:last-child > .btn {
+  background-color: rgba(0, 133, 230, 0.75);
+  color: #fff;
+  border-radius: 0 2px 2px 0;
+  border: 1px solid rgba(0, 133, 230, 0.6);
+  font-weight: 600;
+  height: 45px;
+  margin-left: -2px;
+  box-shadow: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 0 !important;
+  transition: all 0.25s ease-in-out;
+}
+
+.input-group-btn > .btn:active,
+.input-group-btn > .btn:focus,
+.input-group-btn > .btn:hover,
+.input-group-btn > .btn:active:hover {
+  background-color: rgba(0, 133, 230, 1);
+}
+
+.list-tasks {
+  margin-top: 15px;
+}
+
+.list-tasks .list-item {
+  position: relative;
+  padding: 10px 15px 10px 35px;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.list-text {
+  position: relative;
+  color: rgb(0, 0, 0, 1);
+  display: inline-block;
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.list-text:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.list-item.completed .list-text {
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.list-item.completed .list-text:before {
+  animation-name: strike-through;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes strike-through {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.checkbox-wrapper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  color: #363839;
+  border: 1px solid #cfcfcf;
+  margin-top: 0;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.15s cubic-bezier(0.1, 0.1, 0.25, 1);
+  transition: all 0.15s cubic-bezier(0.1, 0.1, 0.25, 1);
+}
+
+.checkbox-wrapper input[type="checkbox"]::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 2px;
+  left: 7px;
+  width: 7px;
+  height: 14px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked {
+  color: rgb(255, 255, 255);
+  border-color: rgb(0, 167, 82);
+  background: rgb(0, 167, 82);
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
