@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 body {
+  background-color: rgb(245, 245, 245);
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: rgb(0, 0, 0, 1);
@@ -60,9 +61,11 @@ a:hover {
 
 .list-tasks .list-item {
   position: relative;
-  padding: 10px 15px 10px 35px;
-  margin-bottom: 10px;
+  padding: 15px 15px 15px 55px;
+  margin-bottom: 15px;
   user-select: none;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 3px rgba(20, 20, 20, 0.15);
 }
 
 .list-text {
@@ -108,7 +111,7 @@ a:hover {
 
 .checkbox-wrapper {
   position: absolute;
-  left: 0;
+  left: 15px;
   top: 50%;
   margin-top: -12px;
 }
@@ -118,6 +121,7 @@ a:hover {
   width: 24px;
   height: 24px;
   color: #363839;
+  background-color: #fff;
   border: 1px solid #cfcfcf;
   margin-top: 0;
   border-radius: 2px;
