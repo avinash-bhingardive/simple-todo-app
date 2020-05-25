@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TodoList from "./TodoList";
 import AddTask from "./AddTask";
+import LeftCount from "./LeftCount";
 class Todo extends Component {
   state = {
     text: "",
@@ -30,6 +31,9 @@ class Todo extends Component {
             text={text}
           />
         </div>
+        <div className="col-xs-12">
+          <LeftCount tasks={tasks} />
+        </div>
       </div>
     );
   }
@@ -42,7 +46,7 @@ class Todo extends Component {
 
     // Create a new task
     const newTask = {
-      id: Math.floor(Date.now() / 1000),
+      id: Math.floor(Date.now() / 1),
       text: this.state.text,
       completed: false,
     };

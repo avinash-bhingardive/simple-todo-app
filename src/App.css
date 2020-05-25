@@ -199,3 +199,9 @@ a:hover {
 .delete:hover:before {
   background-color: rgb(210, 0, 12, 0.9);
 }
+
+.left-counter{
+  display: block;
+  font-size: 12px;
+  color: rgb(110, 110, 110);
+}
