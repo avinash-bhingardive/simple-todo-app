@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import DeleteButton from "./DeleteButton";
 
 class TodoList extends Component {
   state = {};
   render() {
-    let { tasks, onComplete } = this.props;
+    let { tasks, onComplete, onDelete } = this.props;
     return (
       <div className="list-tasks">
         {tasks.map((task) => (
@@ -19,6 +20,7 @@ class TodoList extends Component {
             <label className="list-text" htmlFor={task.id}>
               {task.text}
             </label>
+            <DeleteButton task={task} onDelete={() => onDelete(task)} />
           </div>
         ))}
       </div>

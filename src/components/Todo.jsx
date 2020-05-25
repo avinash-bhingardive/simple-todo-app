@@ -14,7 +14,14 @@ class Todo extends Component {
     return (
       <div className="row">
         <div className="col-xs-12">
-          <TodoList tasks={tasks} onComplete={this.handleComplete} />
+          <h2 className="title">todos</h2>
+        </div>
+        <div className="col-xs-12">
+          <TodoList
+            tasks={tasks}
+            onComplete={this.handleComplete}
+            onDelete={this.handleDelete}
+          />
         </div>
         <div className="col-xs-12">
           <form onSubmit={this.handleSubmit}>
@@ -70,6 +77,16 @@ class Todo extends Component {
     tasks[index] = { ...task };
     tasks[index].completed = !task.completed;
     this.setState({ tasks });
+  };
+
+  // Handles the deletion of a task
+  handleDelete = (task) => {
+    let tasks = [...this.state.tasks];
+    let index = tasks.indexOf(task);
+    if (index !== -1) {
+      tasks.splice(index, 1);
+      this.setState({ tasks });
+    }
   };
 }
 
