@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TodoList from "./TodoList";
-
+import AddTask from "./AddTask";
 class Todo extends Component {
   state = {
     text: "",
@@ -24,22 +24,11 @@ class Todo extends Component {
           />
         </div>
         <div className="col-xs-12">
-          <form onSubmit={this.handleSubmit}>
-            <div className="form-group input-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="What needs to be done?"
-                onChange={this.handleChange}
-                value={text}
-              />
-              <span className="input-group-btn">
-                <button className="btn btn-default" type="submit">
-                  Add a Task
-                </button>
-              </span>
-            </div>
-          </form>
+          <AddTask
+            onSubmit={this.handleSubmit}
+            onChange={this.handleChange}
+            text={text}
+          />
         </div>
       </div>
     );
