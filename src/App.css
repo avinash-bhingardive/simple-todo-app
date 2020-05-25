@@ -75,44 +75,21 @@ a:hover {
 }
 
 .list-text {
-  position: relative;
   color: rgb(25, 25, 25);
-  display: inline-block;
+  display: inline;
   font-weight: 600;
   margin: 0;
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-.list-text:before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-image: linear-gradient(transparent calc(100% - 1px), rgba(0,0,0,0.3) 1px);
+  background-repeat: no-repeat;
+  background-size: 0% 55%;
+  transition: color 0.5s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 
 .list-item.completed .list-text {
   color: rgb(0, 0, 0, 0.5);
-}
-
-.list-item.completed .list-text:before {
-  animation-name: strike-through;
-  animation-duration: 0.25s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes strike-through {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
+  background-size: 100% 55%;
 }
 
 .checkbox-wrapper {
