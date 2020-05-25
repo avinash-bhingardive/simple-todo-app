@@ -67,7 +67,7 @@ a:hover {
 
 .list-tasks .list-item {
   position: relative;
-  padding: 15px 55px;
+  padding: 15px 45px 15px 55px;
   margin-bottom: 15px;
   user-select: none;
   background-color: rgb(255, 255, 255);
@@ -168,15 +168,18 @@ a:hover {
 
 .delete {
   position: absolute;
-  right: 40px;
-  top: 15px;
+  right: 15px;
+  top: 10px;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
 .delete:before,
 .delete:after {
   position: absolute;
-  left: 15px;
+  top: 7px;
+  left: 12px;
   content: "";
   height: 12px;
   width: 1px;
