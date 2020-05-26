@@ -2,7 +2,6 @@
 A simple to-do app created using React.
 
 ## Screenshots
----
 ![Alt text](https://simple-react-todo-app.s3.ap-south-1.amazonaws.com/added_tasks.png "Added tasks")
 ![Alt text](https://simple-react-todo-app.s3.ap-south-1.amazonaws.com/all_tasks_completed.png "All tasks Completed")
 ![Alt text](https://simple-react-todo-app.s3.ap-south-1.amazonaws.com/few_tasks_completed.png "Few tasks completed")
